@@ -3,9 +3,9 @@ Basically, as a lazy programmer my desktop is full of files (Junk Files). Due to
 >for using without any outside library installed download this exe file [Download](https://docs.google.com/uc?export=download&id=1B3WnqQgzj6eHGI5H5yTKcVC23DRzG4Ik
 ) 
 
->[Demo link (cmd version)](https://pypi.org/project/PyQt5/)
+>[Demo link (cmd version)](https://youtu.be/QdxoOVAU-qI)
 
->[Demo link (GUI version)](https://pypi.org/project/PyQt5/)
+>[Demo link (GUI version)](https://youtu.be/TcqG5mbJHpU)
 
 >_Project Dependencies :-_
 * [PyQt5](https://pypi.org/project/PyQt5/) (for GUI version, cmd version not needed)
