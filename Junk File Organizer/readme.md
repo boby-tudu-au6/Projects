@@ -20,15 +20,21 @@ Basically, as a lazy programmer my desktop is full of files (Junk Files). Due to
 
 > How to use (cmd version)
 * For Organize with extension
-![Image](https://docs.google.com/uc?export=download&id=1MfnBhb8SR0RMYAbGCrMeiR14Z1xHdyBT
-)
+```python
+python --path C:\Users\Mom\Downloads\Video --o extension 
+```
 * For organize with size
-![Image](https://docs.google.com/uc?export=download&id=1stfx83DLIwiQmRm_gMxoTyDCXJ-SunOP)
+```python
+python --path C:\Users\Mom\Downloads\Video --o size 
+```
 * For organize with last used date
-![Image](https://docs.google.com/uc?export=download&id=1dDhvaoqVE20xd98H1YvqNHp9s5Lb1ahD
-)
+```python
+python --path C:\Users\Mom\Downloads\Video --o use 
+```
 * For reset files
-![Image](https://docs.google.com/uc?export=download&id=1R3gKURfCqHnCt7zZplrHaYKCA-hg2s02)
+```python
+python --path C:\Users\Mom\Downloads\Video --o reset 
+```
 
 ## 1. Organize by extension
 ---
