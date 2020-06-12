@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include("partials/head")%>
+</head>
+
+<body>
+    <%- include("partials/nav")%>
+    <div class="login-clean">
+        <form class="register_form" method="post">
+            <h1 class="display-4 text-center">Register</h1>
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Name" name="name" style="margin-bottom: 21px;"
+                    value="boby">
+                <input class="form-control" type="email" name="emailid" placeholder="Email" value="js903783@gmail.com">
+            </div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"
+                    value="123"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Register</button></div>
+            <a class="forgot" href="/login">already have an account Login here</a>
+        </form>
+    </div>
+    <script>
+        async function register(event) {
+            event.preventDefault()
+            const {
+                name,
+                emailid,
+                password
+            } = event.target
+            console.log(name.value, email.value, password.value)
+            const registeration = await axios.post("https://employe-portal.herokuapp.com/register", {
+                name: name.value,
+                emailid: emailid.value,
+                password: password.value
+            })
+            console.log(registeration)
+        }
+    </script>
+    <%-include("partials/footer")%>
+</body>
+
+</html>

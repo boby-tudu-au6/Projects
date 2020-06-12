@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+  <style>
+    a{
+      text-decoration:noen;
+      color: white;
+      }
+    a:hover{
+      text-decoration: none;
+      color: white;
+    }
+    p{
+      font-size: 20px;}
+  </style>
+</head>
+<body>
+
+<div class="container pt-4">
+  <form class="form-inline m-auto col-6 text-center">
+    <h1 class="display-4">Enter your query</h1>
+    <input type="text" class="form-control result col-12" onkeyup="search(this.value)" placeholder="search" name="word" autocomplete="off">
+    <div class="auto col-12 bg-dark" style="color: white;"></div>
+  </form>
+</div>
+
+<script>
+  const auto = $(".auto")
+  const result = $(".result")
+    async function search(val){
+      if(val !== ""){
+        auto.empty()
+        const data = await axios.get("http://localhost:8080/search?word="+val)
+        for(i in data.data){
+          auto.append("<a href=http://localhost:8080/result/"+data.data[i].word+"><p>"+data.data[i].word+"</p></a>")
+        }
+      }else{
+        $(".auto").empty()
+      }
+    }
+</script>
+</body>
+</html>

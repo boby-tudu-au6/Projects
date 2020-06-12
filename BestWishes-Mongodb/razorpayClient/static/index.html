@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(214, 214, 214);">
+    <h1 class="someid" style="display:none"></h1>
+    <div class="login_page">
+        <div id="navbar">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+                <div class="container"><a class="navbar-brand" href="#">BestWishes</a></div>
+            </nav>
+        </div>
+        <div class="login-clean">
+            <form method="post" class="loginForm">
+                <h1 class="display-4 text-center">Login</h1>
+                <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" class="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="pass" class="pass" placeholder="Password"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
+            </form>
+        </div>
+    </div>
+    <div class="order_page">
+        <div class="modal fade" role="dialog" tabindex="-1" id="checkout">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Proceed to Checkout</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <p>your next step is to make payment</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary order__pay" onclick="orderPay()" type="button">Proceed</button></div>
+                </div>
+            </div>
+        </div>
+        <section class="d-none order__details">
+            <span class="order__name"></span>
+            <span class="order__amount"></span>
+            <span class="order__id"></span>
+        </section>
+        <div id="navbar">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+                <div class="container"><a class="navbar-brand" href="#">BestWishes</a>
+                    <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                        <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav mr-auto"></ul>
+                        <span class="navbar-text actions"> 
+                            <a class="btn btn-light action-button" role="button" onclick="logout()">logout</a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <h1 class="display-4 text-center" style="margin-top: 15px;margin-bottom: 15px;">Orders</h1>
+        <div class="container order_box" style="margin-bottom: 30px;">
+            <!-- order will go here -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

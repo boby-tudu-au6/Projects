@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include("partials2/head") %> 
+</head>
+
+<body>
+    <%- include("partials2/nav") %> 
+    <div class="jumbotron" style="background-image: url(&quot;https://hdwallsource.com/img/2016/5/empire-state-building-wide-hd-wallpaper-51590-53290-hd-wallpapers.jpg&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;">
+        <h1>Heading text</h1>
+        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        <p><a class="btn btn-primary" role="button">Learn more</a></p>
+    </div>
+    <div class="container create_com" style="box-shadow: 1px 1px 14px lightgray;padding-top: 15px;padding-bottom: 10px;">
+        <h2 class="d-inline-block" style="font-family: Abel, sans-serif;">Create your own company</h2><a class="float-right btn" href="/new" style="width: auto;box-shadow: 1px 1px 15px lightgray;background-color: rgb(255,255,255);">Create</a></div>
+    <h1 class="display-4 text-center" style="margin-top: 65px;">All available companies</h1>
+    <% com.forEach(element => {%>
+        <div class="container" style="box-shadow: 1px 1px 14px lightgray;padding-top: 15px;margin-top: 20px;">
+        <div class="d-inline-block col-8">
+            <h2 class="d-inline-block" style="font-family: 'Barlow Semi Condensed', sans-serif;"><%=element.name%></h2>
+            <p class="d-block">Started at:&nbsp;<%=element.started%></p>
+            <p class="d-block">Employee count:&nbsp;<%=element.emplyees.length%></p>
+        </div><a class="float-right btn" href="/join/<%=element._id%>" style="width: auto;box-shadow: 1px 1px 15px lightgray;background-color: rgb(255,255,255);">Join</a></div>
+    <%})%>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        <%if(session=="none"){%>
+            $(".create_com").hide()
+        <%}else{%>
+            $(".create_com").show()
+        <%}%>
+    </script>
+</body>
+
+</html>
