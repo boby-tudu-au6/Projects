@@ -1,24 +1,27 @@
 import os
 import shutil
 import argparse
-import sys
+# import sys
 import math
 import datetime
 
 
 currnt_directory = os.getcwd()
 
+
 # this function protects current script from being moved with other files
 def checkFile(filename):
-        d = os.path.basename(__file__)
-        if filename==d:
-            return True
-        return False
+    d = os.path.basename(__file__)
+    if filename == d:
+        return True
+    return False
 
-# below function make folder and move all files to it 
+
+# below function make folder and move all files to it
 # based on their extension
 def by_extension(path):
-    files = [file for file in os.listdir(path) if os.path.isfile(os.path.join(path, file))]  # listing all files in given folder
+    files = [file for file in os.listdir(path) if os.path.isfile(
+        os.path.join(path, file))]  # listing all files in given folder
     types = []  # all file types will be stored here
     for i in files:
         a1 = i[::-1].find(".")
@@ -32,15 +35,16 @@ def by_extension(path):
         isType(i, types, path)
     print("done")
 
+
 # below function is checking all file type in given path
 def isType(filename, types, path):
     a1 = filename[::-1].find('.')
     a2 = filename[-a1:]
     if a2 in types:
-        if checkFile(filename)==False:
+        if checkFile(filename) is False:
             shutil.move(os.path.join(path, filename), os.path.join(path, a2))
-        else:pass
-
+        else:
+            pass
 
 
 # below function is for organize junk files based on their size
@@ -85,7 +89,7 @@ def by_size(path):
     # move files to their respective folders
     new_files = [file for file in os.listdir(
         path) if os.path.isfile(os.path.join(path, file))]
-    f = [f for f in new_files if checkFile(f)==False]
+    f = [f for f in new_files if checkFile(f) is False]
     for i in f:
         size_new = convert_size(os.stat(os.path.join(path, i)).st_size)
         size_new = size_new.split("_")
@@ -94,16 +98,16 @@ def by_size(path):
                         os.path.join(path, "50"+size_new[1]))
         else:
             shutil.move(os.path.join(path, i),
-                    os.path.join(path, "100"+size_new[1]))
+                        os.path.join(path, "100"+size_new[1]))
     print("done")
 
 
-# below function organize all files by their last usage date 
+# below function organize all files by their last usage date
 # in given path
 def by_use(path):
     files = [file for file in os.listdir(
         path) if os.path.isfile(os.path.join(path, file))]
-    f = [f for f in files if checkFile(f)==False]
+    f = [f for f in files if checkFile(f) is False]
     for i in f:
         mtime = (os.stat(os.path.join(path, i)).st_atime)
         timestamp = datetime.datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
@@ -114,7 +118,7 @@ def by_use(path):
             cur_date[5:7]), int(cur_date[8:]))
         d3 = str(d2-d1)
         d4 = d3.split(",")[0]
-        if d4[-4:]=="days":
+        if d4[-4:] == "days":
             if int(d3[:-14]) < 10:
                 if not os.path.exists(os.path.join(path, "Less than 10 Days")):
                     os.mkdir(os.path.join(path, "Less than 10 Days"))
@@ -156,25 +160,28 @@ def resetFile(path):
     for i in a:
         for b in i[2]:
             p1 = (os.path.join(i[0], b))
-            try:shutil.move(p1, path)
-            except shutil.Error:pass
+            try:
+                shutil.move(p1, path)
+            except shutil.Error:
+                pass
     folder = [folder for folder in os.listdir(
-        path) if os.path.isfile(os.path.join(path, folder)) == False]
+        path) if os.path.isfile(os.path.join(path, folder)) is False]
     for i in folder:
-        shutil.rmtree(os.path.join(path,i))
+        shutil.rmtree(os.path.join(path, i))
     print("done")
-    
+
 
 # below function is for move all small directory to final folder
 def moveFinal(d):
     allFolders = os.listdir(d.path)
-    if not os.path.exists(os.path.join(d.path,d.d)):
-        os.mkdir(os.path.join(d.path,d.d))
+    if not os.path.exists(os.path.join(d.path, d.d)):
+        os.mkdir(os.path.join(d.path, d.d))
         for i in allFolders:
-            if checkFile(i)==False:
-                shutil.move(os.path.join(d.path,i),os.path.join(d.path,d.d))
+            if checkFile(i) is False:
+                shutil.move(os.path.join(d.path, i), os.path.join(d.path, d.d))
             else:
                 pass
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -188,19 +195,32 @@ def main():
     args = parser.parse_args()
     organise(args)
 
-    
+
 def organise(args):
     if args.o == "extension":
-        by_extension(args.path)
-        moveFinal(args)
-    elif args.o =="size":
-        by_size(args.path)
-        moveFinal(args)
-    elif args.o =="use":
-        by_use(args.path)
-        moveFinal(args)
-    elif args.o=="reset":
-        resetFile(args.path)
+        if os.path.exists(args.path):
+            by_extension(args.path)
+            moveFinal(args)
+        else:
+            print("invalid path")
+    elif args.o == "size":
+        if os.path.exists(args.path):
+            by_size(args.path)
+            moveFinal(args)
+        else:
+            print("Invalid path")
+    elif args.o == "use":
+        if os.path.exists(args.path):
+            by_use(args.path)
+            moveFinal(args)
+        else:
+            print("Invalid path")
+    elif args.o == "reset":
+        if os.path.exists(args.path):
+            resetFile(args.path)
+        else:
+            print("Invalid path")
+
 
 if __name__ == "__main__":
     main()
