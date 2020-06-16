@@ -7,8 +7,14 @@ Basically, as a lazy programmer my desktop is full of files (Junk Files). Due to
 
 >[Demo link (GUI version)](https://youtu.be/TcqG5mbJHpU)
 
->_Project Dependencies :-_
-* [PyQt5](https://pypi.org/project/PyQt5/) (for GUI version, cmd version not needed)
+>_Library used :-_
+* [PyQt5](https://pypi.org/project/PyQt5/) (Third party) (for GUI version only, cmd version not needed)
+* os
+* shutil
+* math
+* datetime
+* argparse
+
 
 >__Main functionality of this code__
 
