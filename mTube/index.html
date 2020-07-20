@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+</head>
+
+<body style="background-color: lightgray;">
+    <nav class="navbar col-12 navbar-light navbar-expand-sm white justify-content-between pt-2 pb-2 pl-5 ml-auto">
+        <div class="sidebar fixed-top pt-3 text-right">
+            <a href="#" class="ml-2 mr-4 text-secondary">
+                <i class="fa fa-bars" style="font-size: 20px;"></i>
+            </a>
+            <ul class="nav flex-column text-center">
+                <li class="link-item p-0 pt-4">
+                    <a href="#" class="nav-link text-danger p-0">
+                        <i class="fa fa-home"></i>
+                        <p class=""><small>Home</small></p>
+                    </a>
+                </li>
+                <li class="link-item p-0 pt-3">
+                    <a href="#" class="nav-link text-secondary p-0">
+                        <i class="fa fa-fire"></i>
+                        <p class=""><small>Trending</small></p>
+                    </a>
+                </li>
+                <li class="link-item p-0 pt-3">
+                    <a href="#" class="nav-link text-secondary p-0">
+                        <i class="fa fa-film"></i>
+                        <p class=""><small>Playlist</small></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="navbar-brand ml-3">
+            <i class="fa fa-youtube-play text-danger"></i>
+            <p class="d-inline logo">YouTube</p>
+        </a>
+        <form class='form form-inline col-6 m-auto p-0 border'>
+            <input type="text" name="search" placeholder="Search" class="form-control-sm col-10 rounded-right border-0">
+            <button class="btn btn-light col-2 text-secondary form-control-sm btn-sm"><i class="fa fa-search"></i></button>
+        </form>
+        <ul class="navbar-nav col-2 text-right justify-content-right">
+            <li class="nav-item ml-auto col-4">
+                <a href="#" class="nav-link"><i class="fa fa-video-camera"></i></a>
+            </li>
+            <li class="nav-item ml-auto col-4">
+                <a href="#" class="nav-link"><i class="fa fa-th"></i></a>
+            </li>
+            <li class="nav-item col-4 p-0">
+                <a href="#" class="nav-link p-0 text-center pt-1">
+                    <img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="img" class="p-0 m-0 col-6 rounded-circle">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- recommended video section -->
+    <!-- <div class="body col-12 mt-1 pl-4">
+        <div class="col-11 white m-auto pt-2">
+            <div class="col-12 p-1 m-0">
+                <h3><small>Recomended</small></h3>
+            </div>
+            <div class="col-12 row p-0">
+                <div class="card col-3 p-0 border-0 m-1">
+                    <img class="card-img-top" src="http://i3.ytimg.com/vi/tNNXr0Mbsq8/maxresdefault.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body pt-1 row">
+                      <div class="col-2 p-0 m-0">
+                        <img src="https://yt3.ggpht.com/a-/AOh14GjdbgGDHmqpWqV5lRe26mDJHI7EyUEvt0O2RQ=s68-c-k-c0x00ffffff-no-rj-mo" alt="img" class="p-0 col-12">
+                      </div>
+                      <div class="col-10 p-0 m-0">
+                          <h6 class="p-0 m-0"><small><strong>New Movies</strong></small></h6>
+                          <p class="p-0 m-0"><small>Kinocheck international</small></p>
+                          <a href="#" class="stretched-link p-0 m-0"></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+
+            </div>
+        </div>
+    </div> -->
+    <!-- trending page -->
+    <!-- <div class="body col-12 mt-1 pl-4">
+        <div class="row col-11 ml-5 mb-2 bg-light pl-0">
+            <div class="col-3 p-1">
+                <img src="http://i3.ytimg.com/vi/tNNXr0Mbsq8/maxresdefault.jpg" alt="img" width="100%"/>
+            </div>
+            <div class="col-9 p-2">
+                <h3 class="p-0 m-0">Title</h3>
+                <p class="p-0 m-0 text-secondary"><small>channel name</small></p>
+                <p class="p-0 m-0 text-secondary"><small>views</small></p>
+                <p class="p-0 m-0 text-secondary"><small>duration</small></p>
+            </div>
+        </div>
+    </div> -->
+<!-- https://www.youtube.com/embed/tgbNymZ7vqY -->
+
+    <div class="body col-12 mt-1 pl-4">
+        <div class="row col-12 m-auto white pl-5 pr-0">
+            <div class="col-7" style="height: 88vh;overflow-y: scroll;">
+                <!-- <iframe style="width: 100%;height: 340px; border: none;" src="https://www.youtube.com/embed/">
+                </iframe> -->
+                <h3 style="font-weight: lighter;">video title</h3>
+                <p class="text-secondary">views,published date</p>
+                <hr/>   
+                <div class="row col-12">
+                    <img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="img" class="p-0 m-0 col-1 rounded-circle">
+                    <div class="col-11 pt-2">
+                        <h6>Channel title</h6>
+                    </div>
+                </div>
+                
+                <p class="text-secondary pl-5">video description</p>
+                <hr/>
+                <div class="comment">
+                    <h6>700 comments</h6>
+                    <!-- this is comment box -->
+                    <div class="comment_box border p-2 rounded">
+                        <div class="row col-12">
+                            <img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="img" class="rounded-circle" width="45px">
+                            <p class="text-secondary ml-3 pt-2">some comments</p>
+                        </div>
+                        <div class="reply_box pl-2">
+                            <button data-toggle="collapse" data-target="#demo" class="btn btn-outline-secondary btn-sm ml-5">Reply</button>
+
+                            <div id="demo" class="collapse ml-5">
+                            Lorem ipsum dolor text....
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 300px;"></div>
+            </div>
+            <div class="col-5" style="height: 88vh;overflow-y: scroll;">playlist</div>
+        </div>
+    </div>
+  <!-- http://i3.ytimg.com/vi/tNNXr0Mbsq8/maxresdefault.jpg -->
+  <script src="./script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
