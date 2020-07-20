@@ -4,49 +4,23 @@ this repository contains all project made by me during my learning day
 >List of all project
 1. BestWishes-SQL
 
-     __Technology used__
-    - nodeJS
-    - PostgresSql
-    - expressJS
-    - Razorpay integration
+    __[Live preview](https://project-bestwishes.herokuapp.com/)__
+    
 2. BestWishes-Mongodb
 
-    __Technology used__
-    - nodeJS
-    - Mongodb
-    - expressJS
-    - Razorpay integration
+    __[Live preview](https://mongo-bestwishes.herokuapp.com/)__
+    
 
-3. Live Search
+3. Employe portal
 
-    __Technology used__
-    - nodeJS
-    - expressJS
-    - Bootstrap
+    __[Live preview](https://employe-portal.herokuapp.com/)__
 
-4. Maze Solver
+4. Link shortener
 
-    __Technology used__
-    - python
-    - tkinter
-    - turtle
+    __[Live preview](https://url-shortz.herokuapp.com/)__
 
-5. Junk file organizer
+5. Live Search
 
-    __Technology used__
-    - python
-    - pyqt5
+6. Maze Solver
 
-6. Employe portal
-
-    __Technology used__
-    - nodeJS
-    - expressJS
-    - ejs
-    - mongodb
-
-7. Link shortener
-
-    __Technology used__
-    - nodeJS
-    - expressJS
+7. Junk file organizer
