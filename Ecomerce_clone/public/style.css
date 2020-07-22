@@ -1,0 +1,16 @@
+.shadow{
+  box-shadow: 4px 5px 10px rgb(228, 228, 228);
+}
+.text-shadow{
+  text-shadow: 4px 5px 10px black;
+}
+.black{
+  background-color: black;
+}
+.jumbotron{
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/0401runningshoes-1585760166.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*');
+}
+
+.roundInput{
+  border-radius: 50px;
+}
