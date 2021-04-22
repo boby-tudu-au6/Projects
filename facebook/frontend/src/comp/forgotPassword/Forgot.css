@@ -1,0 +1,59 @@
+#rowF {
+    
+    background-color: white;
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 0rem;
+    box-shadow: 0px 10px 50px #555;
+}
+#rowF .col-12{
+    box-shadow: none;
+    
+}
+#rowF  input{
+    width: 400px;
+    margin-left: 3rem;
+}
+#rowF  input:focus{
+    box-shadow: 0px 10px 50px rgba(85, 85, 85, 0.13);
+
+  border: 1px solid rgb(2, 2, 144);
+}
+#rowF h1, h5{
+    text-align: center;
+}
+#rowF label {
+    font-weight: normal;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-left: 3rem;
+    color: black;
+   
+}
+#labelc {
+
+    margin-left: -2rem;
+
+   
+}
+ #rowF button {
+    margin: 30px 0 20px;
+    color: white;
+    width: 400px;
+    height: 3rem;
+    padding: 6px;
+    background-color: #4301a6;
+    border: 2px solid rgb(255, 255, 255);
+     border-radius: none;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+

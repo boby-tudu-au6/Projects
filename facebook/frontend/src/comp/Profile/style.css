@@ -1,0 +1,14 @@
+.MuiFab-secondary{
+    margin-top: 8rem !important;
+   
+}
+
+.ReactModal__Content{
+    height: 20vh;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10rem;
+}
+#nobox{
+    margin-left: 33px;
+}

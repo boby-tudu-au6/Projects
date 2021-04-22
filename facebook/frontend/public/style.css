@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
+.navBrand{
+  font-family: 'PT Sans', sans-serif;
+  margin-left: 10%;
+  font-size: 30px;
+}
+
+body{background-color: lightgray;}
+
+.navbar{background-color: #4267B2}
+
+.logo{font-size: 35px;}
+
+.transparent{background-color: transparent}
+
+.icon{font-size: 18px;}
+
+.lightfont{font-weight: lighter;}
+
+.round{border-radius: 100px;}
+
+.lightgray{background-color:rgb(233, 233, 233)}
+
+.darkgray{background-color: darkgray;}
+
+.small{font-size: 14px;}
+
+.extra_small{font-size: 9px}
+
+.hid{overflow: hidden}
+.navitem{cursor: pointer;}
+
+/* .navitem:hover{background-color: #304a80;} */
+.navitem:hover{background-color: black;color: white;}
+.badge{
+  position: absolute;
+  left: 40px;
+}
+
+/* .emoji_box{color: white;} */
+
+.emoji_box:hover{
+  background-color: lightgray;
+  color: black;
+}
+.searchform{
+  height: 35px;
+  overflow: hidden;
+}
+.full{
+  height: 88vh;
+  overflow-y: scroll
+}
+.secCol{
+  height: 74vh;
+  overflow-y: scroll;
+}
+p{
+padding: 0;
+margin: 0
+}
+.messageBox{
+  height:66vh;
+  overflow-y: scroll;
+}
+
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {width: 5px;}
+
+/* Track */
+::-webkit-scrollbar-track {background-color: transparent}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 100px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #555;}
+
+.localVideo{
+  position: absolute;
+  top:40px;
+  left:20px;
+  z-index:100;
+  border: 1px solid gray;
+}
+.remoteDiv{
+  position: absolute;
+  left: 0px;
+  width:600px;
+  min-height:350px;
+}
+.remoteVideo{
+  /* position: absolute;
+  left:0px; */
+  width: 100%;
+}
+.controls{
+  z-index: 300;
+  width:600px;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  left:0px;
+  top:300px;
+}
+
+
+
+.box {
+  align-self: flex-end;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+}
+.bounce-1 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-50px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
