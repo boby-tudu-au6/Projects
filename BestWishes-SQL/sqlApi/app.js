@@ -16,7 +16,7 @@ app.use(get)
 
 
 
-app.listen(process.env.PORT,(err)=>{
+app.listen(8000,(err)=>{
 if(err){
     return res.json(err).status(400)
 }
